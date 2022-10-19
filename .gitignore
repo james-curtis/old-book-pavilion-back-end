@@ -9,5 +9,3 @@ rebel.xml
 
 ## front
 **/*.lock
-
-application-local.yml
