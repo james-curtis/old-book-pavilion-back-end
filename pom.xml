@@ -396,20 +396,34 @@
 	
     <!-- 环境 -->
     <profiles>
-        <!-- 开发 -->
-        <profile>
-            <id>dev</id>
-            <activation>
-                <!--默认激活配置-->
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <!--当前环境-->
-                <profile.name>dev</profile.name>
+		<!-- 开发 -->
+		<profile>
+			<id>dev</id>
+			<activation>
+				<!--默认激活配置-->
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<!--当前环境-->
+				<profile.name>dev</profile.name>
 				<!--Nacos服务地址-->
-                <config.server-addr>jeecg-boot-nacos:8848</config.server-addr>
-            </properties>
-        </profile>
+				<config.server-addr>jeecg-boot-nacos:8848</config.server-addr>
+			</properties>
+		</profile>
+		<!-- 本地开发 -->
+		<profile>
+			<id>local</id>
+			<activation>
+				<!--默认激活配置-->
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<properties>
+				<!--当前环境-->
+				<profile.name>local</profile.name>
+				<!--Nacos服务地址-->
+				<config.server-addr>jeecg-boot-nacos:8848</config.server-addr>
+			</properties>
+		</profile>
         <!-- 测试 -->
         <profile>
             <id>test</id>
