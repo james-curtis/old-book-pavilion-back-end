@@ -18,12 +18,18 @@
             <artifactId>jeecg-system-biz</artifactId>
             <version>${jeecgboot.version}</version>
         </dependency>
-        <!-- DEMO 示例模块 -->
+        <!-- Pavilion 旧书阁 -->
         <dependency>
             <groupId>org.jeecgframework.boot</groupId>
-            <artifactId>jeecg-module-demo</artifactId>
+            <artifactId>jeecg-module-pavilion</artifactId>
             <version>${jeecgboot.version}</version>
         </dependency>
+<!--        &lt;!&ndash; DEMO 示例模块 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.jeecgframework.boot</groupId>-->
+<!--            <artifactId>jeecg-module-demo</artifactId>-->
+<!--            <version>${jeecgboot.version}</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>
