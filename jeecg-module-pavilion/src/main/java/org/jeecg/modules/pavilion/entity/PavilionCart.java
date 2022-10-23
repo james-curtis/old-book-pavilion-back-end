@@ -3,6 +3,7 @@ package org.jeecg.modules.pavilion.entity;
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
+import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -13,17 +14,21 @@ import org.jeecgframework.poi.excel.annotation.Excel;
 import org.jeecg.common.aspect.annotation.Dict;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
 /**
- * @Description: 商品
+ * @Description: 购物车记录
  * @Author: jeecg-boot
  * @Date:   2022-10-23
  * @Version: V1.0
  */
-@ApiModel(value="pavilion_good对象", description="商品")
 @Data
-@TableName("pavilion_good")
-public class PavilionGood implements Serializable {
+@TableName("pavilion_cart")
+@Accessors(chain = true)
+@EqualsAndHashCode(callSuper = false)
+@ApiModel(value="pavilion_cart对象", description="购物车记录")
+public class PavilionCart implements Serializable {
     private static final long serialVersionUID = 1L;
 
 	/**主键*/
@@ -49,33 +54,13 @@ public class PavilionGood implements Serializable {
 	/**所属部门*/
     @ApiModelProperty(value = "所属部门")
     private java.lang.String sysOrgCode;
-	/**商品标题*/
-	@Excel(name = "商品标题", width = 15)
-    @ApiModelProperty(value = "商品标题")
-    private java.lang.String title;
-	/**商品介绍*/
-	@Excel(name = "商品介绍", width = 15)
-    @ApiModelProperty(value = "商品介绍")
-    private java.lang.String summary;
-	/**价格*/
-	@Excel(name = "价格", width = 15)
-    @ApiModelProperty(value = "价格")
-    private java.math.BigDecimal price;
-	/**发布用户*/
-	@Excel(name = "发布用户", width = 15, dictTable = "sys_user", dicText = "realname", dicCode = "username")
-    @Dict(dictTable = "sys_user", dicText = "realname", dicCode = "username")
-    @ApiModelProperty(value = "发布用户")
+	/**用户id*/
+	@Excel(name = "用户id", width = 15, dictTable = "sys_user", dicText = "realname", dicCode = "username")
+	@Dict(dictTable = "sys_user", dicText = "realname", dicCode = "username")
+    @ApiModelProperty(value = "用户id")
     private java.lang.String userId;
-	/**ISBN编号*/
-	@Excel(name = "ISBN编号", width = 15)
-    @ApiModelProperty(value = "ISBN编号")
-    private java.lang.String isbn;
-	/**对应图书*/
-	@Excel(name = "对应图书", width = 15)
-    @ApiModelProperty(value = "对应图书")
-    private java.lang.String bookId;
-	/**浏览量*/
-	@Excel(name = "浏览量", width = 15)
-    @ApiModelProperty(value = "浏览量")
-    private java.lang.Integer views;
+	/**购买个数*/
+	@Excel(name = "购买个数", width = 15)
+    @ApiModelProperty(value = "购买个数")
+    private java.lang.Integer count;
 }
