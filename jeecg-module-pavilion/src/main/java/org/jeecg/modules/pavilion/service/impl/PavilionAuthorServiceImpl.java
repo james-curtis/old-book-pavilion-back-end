@@ -1,11 +1,14 @@
 package org.jeecg.modules.pavilion.service.impl;
 
 import org.jeecg.modules.pavilion.entity.PavilionAuthor;
+import org.jeecg.modules.pavilion.entity.PavilionBook;
 import org.jeecg.modules.pavilion.mapper.PavilionAuthorMapper;
 import org.jeecg.modules.pavilion.service.IPavilionAuthorService;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+
+import java.util.List;
 
 /**
  * @Description: 图书作者
@@ -15,5 +18,4 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
  */
 @Service
 public class PavilionAuthorServiceImpl extends ServiceImpl<PavilionAuthorMapper, PavilionAuthor> implements IPavilionAuthorService {
-
 }

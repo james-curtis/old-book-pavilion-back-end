@@ -11,3 +11,6 @@ rebel.xml
 **/*.lock
 
 application-local.yml
+application-yezihan.yml
+jeecg_config.properties
+jeecg_database.properties
