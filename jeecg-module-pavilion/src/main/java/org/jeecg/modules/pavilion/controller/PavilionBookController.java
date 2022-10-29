@@ -171,7 +171,7 @@ public class PavilionBookController extends JeecgController<PavilionBook, IPavil
      * @param keyword 待查询的关键词
      * @return 书本信息的List
      */
-    @GetMapping(value = "getBookInformation")
+    @GetMapping(value = "/search")
     @ResponseBody
     public Result<List<PavilionBook>> getBookInformation(String keyword) {
         return pavilionBookService.getBookInformation(keyword);
