@@ -1,0 +1,16 @@
+## ide
+**/.idea
+*.iml
+rebel.xml
+
+## backend
+**/target
+**/logs
+
+## front
+**/*.lock
+
+application-local.yml
+application-yezihan.yml
+jeecg_config.properties
+jeecg_database.properties
